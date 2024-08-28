@@ -1,0 +1,110 @@
+<!-- res/layout/fragment_image_click_game.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imgKekod1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgKekod9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kekod"
+            android:visibility="gone" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game_text" />
+</LinearLayout>
