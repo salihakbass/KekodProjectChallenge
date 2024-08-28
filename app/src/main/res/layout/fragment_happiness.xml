@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/thinkAnim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/thinking_anim" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/winnerAnim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/winner_anim" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lostAnim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/sorry_face_anim" />
+
+
+    </FrameLayout>
+
+
+    <EditText
+        android:id="@+id/guessInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="1 ile 50 arasında bir sayı girin"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Tahmin Et"
+        app:layout_constraintStart_toStartOf="@+id/guessInput"
+        app:layout_constraintTop_toBottomOf="@+id/guessInput" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/upAnim"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/guessButton"
+        app:layout_constraintStart_toEndOf="@+id/guessButton"
+        app:layout_constraintTop_toTopOf="@+id/guessButton"
+        app:lottie_rawRes="@raw/up_anim" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/downAnim"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        app:lottie_rawRes="@raw/down_anim"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/upAnim"
+        app:layout_constraintStart_toEndOf="@+id/upAnim"
+        app:layout_constraintTop_toTopOf="@+id/upAnim" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Yeniden Başlat"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessButton" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/restartButton"
+        app:layout_constraintEnd_toEndOf="@+id/restartButton"
+        app:layout_constraintStart_toStartOf="@+id/restartButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
