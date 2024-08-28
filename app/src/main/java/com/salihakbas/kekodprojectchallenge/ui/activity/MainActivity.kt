@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var navHostFragment: NavHostFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -62,16 +61,18 @@ class MainActivity : AppCompatActivity() {
     fun getBottomNavigationView(): BottomNavigationView {
         return binding.bottomNav
     }
-    fun addMenuItem(title: String, fragmentId: Int) {
+    fun addMenuItem(title: String, fragmentId: Int, iconResId: Int) {
         val menu = binding.bottomNav.menu
         val itemId = fragmentId  // Menü item'ı için ID olarak fragment ID'sini kullanıyoruz
         val item = menu.findItem(itemId)
 
         if (item == null) {
-            menu.add(0, itemId, menu.size(), title).setOnMenuItemClickListener {
-                navigateToFragment(fragmentId)
-                true
-            }
+            menu.add(0, itemId, menu.size(), title)
+                .setIcon(iconResId)
+                .setOnMenuItemClickListener {
+                    navigateToFragment(fragmentId)
+                    true
+                }
         }
     }
 
