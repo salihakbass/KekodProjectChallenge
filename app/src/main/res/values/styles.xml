@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TicTacToeButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+    </style>
+
+    <style name="switchMaterialButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:thumb">@drawable/custom_switch_thumb</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="switchPageAnimation">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">false</item>
+        <item name="android:layout_marginTop">32dp</item>
+    </style>
+</resources>
