@@ -44,7 +44,7 @@ class HappinessFragment : Fragment() {
     }
 
     private fun resetGame() {
-        randomNumber = Random.nextInt(1, 101)
+        randomNumber = Random.nextInt(1, 51)
         attemptsLeft = 5
         binding.guessButton.isEnabled = true
         binding.restartButton.visibility = View.GONE
