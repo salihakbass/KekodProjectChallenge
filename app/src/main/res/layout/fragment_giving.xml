@@ -95,19 +95,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startButton"
         android:layout_width="match_parent"
-        android:background="@drawable/bg_custom_round"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_custom_round"
         android:text="@string/start_game_text" />
 </LinearLayout>

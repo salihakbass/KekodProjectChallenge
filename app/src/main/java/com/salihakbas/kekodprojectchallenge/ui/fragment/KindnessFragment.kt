@@ -1,20 +1,33 @@
 package com.salihakbas.kekodprojectchallenge.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import com.salihakbas.kekodprojectchallenge.R
+import androidx.fragment.app.Fragment
 import com.salihakbas.kekodprojectchallenge.databinding.FragmentKindnessBinding
 
 class KindnessFragment : Fragment() {
     private lateinit var binding: FragmentKindnessBinding
-    private val words = listOf("Kekod", "Android", "Kotlin", "Jetpack", "Binding", "Retrofit", "Fragment", "Activity", "Viewmodel", "Mvvm", "Room", "Java", "Compose", "Xml", "Data", "Repository")
+    private val words = listOf(
+        "Kekod",
+        "Android",
+        "Kotlin",
+        "Jetpack",
+        "Binding",
+        "Retrofit",
+        "Fragment",
+        "Activity",
+        "Viewmodel",
+        "Mvvm",
+        "Room",
+        "Java",
+        "Compose",
+        "Xml",
+        "Data",
+        "Repository"
+    )
     private var currentWord = ""
     private var currentWordIndex = 0
     private var currentDisplay = ""
@@ -25,7 +38,7 @@ class KindnessFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentKindnessBinding.inflate(inflater,container,false)
+        binding = FragmentKindnessBinding.inflate(inflater, container, false)
         return binding.root
 
 
@@ -66,7 +79,7 @@ class KindnessFragment : Fragment() {
     private fun checkGuess(userGuess: String) {
         if (userGuess.equals(currentWord, ignoreCase = true)) {
             score += currentDisplay.count { it == '_' }
-            binding.scoreTextView.text = "Score: $score"
+            binding.scoreTextView.text = "Skor: $score"
             loadNextWord()
         } else {
             revealNextLetter()
@@ -78,14 +91,17 @@ class KindnessFragment : Fragment() {
     private fun revealNextLetter() {
         for (i in currentDisplay.indices) {
             if (currentDisplay[i] == '_') {
-                currentDisplay = currentDisplay.substring(0, i) + currentWord[i] + currentDisplay.substring(i + 1)
+                currentDisplay = currentDisplay.substring(
+                    0,
+                    i
+                ) + currentWord[i] + currentDisplay.substring(i + 1)
                 break
             }
         }
     }
 
     private fun showEndGame() {
-        Toast.makeText(context, "Game Over! Your score: $score", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "Oyun Bitti ! Skorunuz: $score", Toast.LENGTH_LONG).show()
         binding.restartButton.visibility = View.VISIBLE
     }
 

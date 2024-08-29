@@ -49,7 +49,7 @@ class GivingFragment : Fragment() {
             imageView.setOnClickListener {
                 if (imageView.visibility == View.VISIBLE) {
                     score++
-                    binding.scoreTextView.text = "Score: $score"
+                    binding.scoreTextView.text = "Skor: $score"
                     imageView.visibility = View.GONE
                 }
             }
@@ -66,15 +66,15 @@ class GivingFragment : Fragment() {
         gameStarted = true
         score = 0
         timeLeft = 20
-        binding.scoreTextView.text = "Score: $score"
-        binding.timerTextView.text = "Time: $timeLeft"
+        binding.scoreTextView.text = "Skor: $score"
+        binding.timerTextView.text = "Süre: $timeLeft"
         binding.startButton.visibility = View.GONE
 
         handler.postDelayed(object : Runnable {
             override fun run() {
                 if (timeLeft > 0) {
                     timeLeft--
-                    binding.timerTextView.text = "Time: $timeLeft"
+                    binding.timerTextView.text = "Süre: $timeLeft"
                     showRandomImage()
                     handler.postDelayed(this, 500)
                 } else {

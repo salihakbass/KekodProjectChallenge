@@ -1,7 +1,6 @@
 package com.salihakbas.kekodprojectchallenge.ui.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -10,6 +9,7 @@ import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.salihakbas.kekodprojectchallenge.R
 import com.salihakbas.kekodprojectchallenge.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                     navigateToFragment(R.id.switchFragment)
                     true
                 }
+
                 R.id.happinessFragment -> {
                     navigateToFragment(R.id.happinessFragment)
                     true
@@ -61,15 +62,14 @@ class MainActivity : AppCompatActivity() {
     fun getBottomNavigationView(): BottomNavigationView {
         return binding.bottomNav
     }
+
     fun addMenuItem(title: String, fragmentId: Int, iconResId: Int) {
         val menu = binding.bottomNav.menu
         val itemId = fragmentId  // Menü item'ı için ID olarak fragment ID'sini kullanıyoruz
         val item = menu.findItem(itemId)
 
         if (item == null) {
-            menu.add(0, itemId, menu.size(), title)
-                .setIcon(iconResId)
-                .setOnMenuItemClickListener {
+            menu.add(0, itemId, menu.size(), title).setIcon(iconResId).setOnMenuItemClickListener {
                     navigateToFragment(fragmentId)
                     true
                 }
@@ -86,5 +86,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToFragment(fragmentId: Int) {
         navHostFragment.navController.navigate(fragmentId)
+
     }
 }

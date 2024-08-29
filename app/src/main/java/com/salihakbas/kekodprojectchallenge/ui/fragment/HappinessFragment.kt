@@ -1,12 +1,11 @@
 package com.salihakbas.kekodprojectchallenge.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.salihakbas.kekodprojectchallenge.R
+import androidx.fragment.app.Fragment
 import com.salihakbas.kekodprojectchallenge.databinding.FragmentHappinessBinding
 import kotlin.random.Random
 

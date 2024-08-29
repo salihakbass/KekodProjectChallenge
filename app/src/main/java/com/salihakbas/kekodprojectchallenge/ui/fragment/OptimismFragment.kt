@@ -89,7 +89,7 @@ class OptimismFragment : Fragment() {
                 if (buttons[i][j]?.text.isNullOrEmpty()) {
                     buttons[i][j]?.text = "O"
                     if (checkForWin("O")) {
-                        Toast.makeText(context, "Sistem kazandı!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Kaybettiniz!", Toast.LENGTH_SHORT).show()
                         resetBoard()
                     }
                     playerTurn = true
