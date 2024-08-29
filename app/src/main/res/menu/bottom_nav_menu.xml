@@ -2,5 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/switchFragment"
-        android:title="Switches" />
+        android:title="Switches"
+        android:icon="@drawable/ic_home"/>
 </menu>

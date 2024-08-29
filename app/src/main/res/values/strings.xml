@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">KekodProjectChallenge</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_desc_text">Uygulamaya geçiş yapmadan önce \n egonu bir kenara bırak ve keyfini çıkar</string>
+    <string name="intro_start_desc">Hadi Başlayalım</string>
+    <string name="start_game_text">Start Game</string>
+    <string name="guess_the_word_text">Guess the word</string>
+    <string name="submit_guess_text">Submit Guess</string>
+    <string name="restart_game_text">Restart Game</string>
+    <string name="guess_the_word_game_text">Guess The Word Game</string>
+    <string name="guess_word_desc_text">Android geliştirmeye yeterince hakim olduğunu\n duydum. Bakalım söylenilen kadar hakim misin?</string>
+    <string name="happiness_text">Happiness</string>
+    <string name="optimism_text">Optimism</string>
+    <string name="kindness_text">Kindness</string>
+    <string name="giving_text">Giving</string>
+    <string name="respect_text">Respect</string>
+    <string name="ego_text">Ego</string>
 </resources>
