@@ -1,6 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,13 +9,12 @@
         android:id="@+id/wordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="K____"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGameDesc" />
 
     <EditText
         android:id="@+id/guessEditText"
@@ -25,39 +23,69 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
-        android:hint="Guess the word"
+        android:hint="@string/guess_the_word_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wordTextView" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/guessButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Submit Guess"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_custom_round"
+        android:text="@string/submit_guess_text"
         app:layout_constraintEnd_toEndOf="@+id/guessEditText"
+        app:layout_constraintStart_toStartOf="@+id/guessEditText"
         app:layout_constraintTop_toBottomOf="@+id/guessEditText" />
 
     <TextView
         android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="Score: 0"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guessEditText"
-        app:layout_constraintTop_toBottomOf="@+id/guessEditText" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/guessButton"
+        app:layout_constraintStart_toStartOf="@+id/guessButton"
+        app:layout_constraintTop_toBottomOf="@+id/guessButton" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/restartButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_custom_round"
+        android:text="@string/restart_game_text"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/scoreTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/guess_the_word_game_text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGameDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="Restart Game"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/guessButton"
-        app:layout_constraintTop_toBottomOf="@+id/guessButton" />
+        android:text="@string/guess_word_desc_text"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/tvGameName"
+        app:layout_constraintStart_toStartOf="@+id/tvGameName"
+        app:layout_constraintTop_toBottomOf="@+id/tvGameName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
