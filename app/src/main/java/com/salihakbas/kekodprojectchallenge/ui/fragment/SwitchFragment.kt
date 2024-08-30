@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.isVisible
@@ -28,6 +29,7 @@ class SwitchFragment : Fragment(), SwitchListener {
             binding.scHappiness, binding.scOptimism, binding.scKindness, binding.scGiving, binding.scRespect
         )
 
+        getAnimation()
         // Başlangıçta ego switchi etkinleştir, diğer switchleri kapat
         initializeSwitches(switchList)
         // Ego switchinin açık olduğu durumlarda diğer switchleri kapat
@@ -152,6 +154,16 @@ class SwitchFragment : Fragment(), SwitchListener {
         for (id in ids) {
             activity.removeMenuItem(id)
         }
+    }
+    fun getAnimation() {
+        val topAnimation =  AnimationUtils.loadAnimation(context,R.anim.top_animation)
+        val bottomAnimation = AnimationUtils.loadAnimation(context,R.anim.bottom_animation)
+        binding.scEgo.startAnimation(bottomAnimation)
+        binding.scRespect.startAnimation(bottomAnimation)
+        binding.scGiving.startAnimation(bottomAnimation)
+        binding.scKindness.startAnimation(topAnimation)
+        binding.scHappiness.startAnimation(topAnimation)
+        binding.scOptimism.startAnimation(topAnimation)
     }
 
 }
