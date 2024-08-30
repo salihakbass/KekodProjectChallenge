@@ -39,4 +39,9 @@
             android:id="@+id/action_splashFragment_to_switchFragment"
             app:destination="@id/switchFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/respectFragment"
+        android:name="com.salihakbas.kekodprojectchallenge.ui.fragment.RespectFragment"
+        android:label="fragment_respect"
+        tools:layout="@layout/fragment_respect" />
 </navigation>
