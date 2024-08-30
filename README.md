@@ -4,6 +4,7 @@ This project has been designed by Gökhan Öztürk for the purpose of helping st
 ## Splash Screen
 When we come to this screen, we are greeted by 6 switches. Initially, the Ego Switch is off, and the Lottie Animation adjusts accordingly. When the Ego Switch is on, the remaining switches become interactable. Once we turn on the Ego Switch, we can interact with the other switches. For each switch that the user turns on, a text and icon related to that switch are added to the 
 Bottom Navigation and navigation to the corresponding pages can be done via the Bottom Navigation.
+
 <img src="https://github.com/user-attachments/assets/959ef02a-9ac4-4b53-848d-e0ff801b2c42" width="300">
 
 ## Main Screen when Ego Switch Open and Close
