@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -118,15 +119,20 @@ class SwitchFragment : Fragment(), SwitchListener {
             R.id.scOptimism to Pair(R.id.optimismFragment, R.drawable.ic_cart),
             R.id.scKindness to Pair(R.id.kindnessFragment, R.drawable.ic_favorite),
             R.id.scGiving to Pair(R.id.givingFragment, R.drawable.ic_profile),
+            R.id.scRespect to Pair(R.id.respectFragment, R.drawable.ic_profile)
         )
 
         for ((switchId, menuItemId) in switchToMenuItemIdMap) {
             val switch = binding.root.findViewById<SwitchCompat>(switchId)
             switch.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
-                    val (fragmentId, iconResId) = menuItemId
-                    val title = switch.text.toString()
-                    activity.addMenuItem(title, fragmentId, iconResId)
+                    if (activity.getBottomNavigationView().menu.size() < 5) {
+                        val (fragmentId, iconResId) = menuItemId
+                        val title = switch.text.toString()
+                        activity.addMenuItem(title, fragmentId, iconResId)
+                    } else {
+                        Toast.makeText(context, "Bottom navigation can only have 5 items", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
                     val (fragmentId, _) = menuItemId
                     activity.removeMenuItem(fragmentId)
@@ -140,7 +146,8 @@ class SwitchFragment : Fragment(), SwitchListener {
             R.id.happinessFragment,
             R.id.optimismFragment,
             R.id.kindnessFragment,
-            R.id.givingFragment
+            R.id.givingFragment,
+            R.id.respectFragment
         )
         for (id in ids) {
             activity.removeMenuItem(id)
