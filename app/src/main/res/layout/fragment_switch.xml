@@ -58,17 +58,17 @@
 
 
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch1"
+                android:id="@+id/scHappiness"
                 style="@style/switchMaterialButton"
                 android:text="@string/happiness_text" />
 
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch2"
+                android:id="@+id/scOptimism"
                 style="@style/switchMaterialButton"
                 android:text="@string/optimism_text" />
 
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch3"
+                android:id="@+id/scKindness"
                 style="@style/switchMaterialButton"
                 android:text="@string/kindness_text" />
 
@@ -85,12 +85,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch4"
+                android:id="@+id/scGiving"
                 style="@style/switchMaterialButton"
                 android:text="@string/giving_text" />
 
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch5"
+                android:id="@+id/scRespect"
                 style="@style/switchMaterialButton"
                 android:text="@string/respect_text" />
 
