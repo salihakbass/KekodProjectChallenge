@@ -115,11 +115,11 @@ class SwitchFragment : Fragment(), SwitchListener {
 
     fun manageMenuItems(activity: MainActivity) {
         val switchToMenuItemIdMap = mapOf(
-            R.id.scHappiness to Pair(R.id.happinessFragment, R.drawable.ic_search),
-            R.id.scOptimism to Pair(R.id.optimismFragment, R.drawable.ic_cart),
-            R.id.scKindness to Pair(R.id.kindnessFragment, R.drawable.ic_favorite),
-            R.id.scGiving to Pair(R.id.givingFragment, R.drawable.ic_profile),
-            R.id.scRespect to Pair(R.id.respectFragment, R.drawable.ic_profile)
+            R.id.scHappiness to Pair(R.id.happinessFragment, R.drawable.game1),
+            R.id.scOptimism to Pair(R.id.optimismFragment, R.drawable.game2),
+            R.id.scKindness to Pair(R.id.kindnessFragment, R.drawable.game3),
+            R.id.scGiving to Pair(R.id.givingFragment, R.drawable.game4),
+            R.id.scRespect to Pair(R.id.respectFragment, R.drawable.game5)
         )
 
         for ((switchId, menuItemId) in switchToMenuItemIdMap) {
