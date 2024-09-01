@@ -33,8 +33,7 @@ class SplashFragment : Fragment() {
             requireContext(),
             R.anim.bottom_animation
         )
-        val mainActivity = activity as MainActivity
-        mainActivity.getBottomNavigationView().visibility = View.GONE
+
         binding.ivKekod.startAnimation(topAnimation)
         binding.btnStart.startAnimation(bottomAnimation)
         binding.tvDesc.startAnimation(bottomAnimation)
