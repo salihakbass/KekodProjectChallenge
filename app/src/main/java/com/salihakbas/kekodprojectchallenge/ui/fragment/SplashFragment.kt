@@ -33,14 +33,22 @@ class SplashFragment : Fragment() {
             requireContext(),
             R.anim.bottom_animation
         )
+        val stbAnimation = android.view.animation.AnimationUtils.loadAnimation(
+            requireContext(),
+            R.anim.stb_anim
+        )
 
-        binding.ivKekod.startAnimation(topAnimation)
+        binding.ivKekod.startAnimation(stbAnimation)
         binding.btnStart.startAnimation(bottomAnimation)
         binding.tvDesc.startAnimation(bottomAnimation)
 
         binding.btnStart.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_splashFragment_to_switchFragment)
         }
+    }
+
+    private fun getAnimation() {
+
     }
 
 }
