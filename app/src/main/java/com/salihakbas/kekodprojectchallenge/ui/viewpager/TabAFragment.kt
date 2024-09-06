@@ -1,30 +1,30 @@
-package com.salihakbas.kekodprojectchallenge.ui.fragment
+package com.salihakbas.kekodprojectchallenge.ui.viewpager
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.salihakbas.kekodprojectchallenge.R
-import com.salihakbas.kekodprojectchallenge.databinding.FragmentSplashBinding
-import com.salihakbas.kekodprojectchallenge.ui.activity.MainActivity
+import com.salihakbas.kekodprojectchallenge.databinding.FragmentTabABinding
 
 
-class SplashFragment : Fragment() {
-    private lateinit var binding: FragmentSplashBinding
+class TabAFragment : Fragment() {
+    private lateinit var binding: FragmentTabABinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentSplashBinding.inflate(inflater, container, false)
+        binding = FragmentTabABinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val topAnimation = android.view.animation.AnimationUtils.loadAnimation(
             requireContext(),
             R.anim.top_animation
@@ -39,15 +39,8 @@ class SplashFragment : Fragment() {
         )
 
         binding.ivKekod.startAnimation(stbAnimation)
-        binding.btnStart.startAnimation(bottomAnimation)
         binding.tvDesc.startAnimation(bottomAnimation)
 
-        binding.btnStart.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_splashFragment_to_switchFragment)
-        }
-    }
-
-    private fun getAnimation() {
 
     }
 

@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_optimism" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.salihakbas.kekodprojectchallenge.ui.fragment.SplashFragment"
+        android:name="com.salihakbas.kekodprojectchallenge.ui.viewpager.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -44,4 +44,14 @@
         android:name="com.salihakbas.kekodprojectchallenge.ui.fragment.RespectFragment"
         android:label="fragment_respect"
         tools:layout="@layout/fragment_respect" />
+    <fragment
+        android:id="@+id/tabAFragment"
+        android:name="com.salihakbas.kekodprojectchallenge.ui.viewpager.TabAFragment"
+        android:label="fragment_tab_a"
+        tools:layout="@layout/fragment_tab_a" />
+    <fragment
+        android:id="@+id/tabBFragment"
+        android:name="com.salihakbas.kekodprojectchallenge.ui.viewpager.TabBFragment"
+        android:label="fragment_tab_b"
+        tools:layout="@layout/fragment_tab_b" />
 </navigation>
