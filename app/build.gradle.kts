@@ -49,14 +49,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    // Mockito core
-    testImplementation (libs.mockito.core)
 
-    // Mockito inline (opsiyonel, final sınıfları ve statik metodları mocklamak için)
-    testImplementation (libs.mockito.inline)
+    implementation(libs.androidx.core.splashscreen)
 
-    // Mockito Android (Android projeleri için)
-    androidTestImplementation (libs.mockito.android)
+    implementation(libs.androidx.viewpager2)
+    implementation (libs.material.v190)
+
+    implementation(libs.dotsindicator)
+    
 
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
