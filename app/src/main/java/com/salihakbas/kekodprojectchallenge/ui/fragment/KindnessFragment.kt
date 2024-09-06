@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.salihakbas.kekodprojectchallenge.R
 import com.salihakbas.kekodprojectchallenge.databinding.FragmentKindnessBinding
 
 class KindnessFragment : Fragment() {
@@ -39,6 +41,7 @@ class KindnessFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentKindnessBinding.inflate(inflater, container, false)
+        getAnimations()
         return binding.root
 
 
@@ -103,6 +106,17 @@ class KindnessFragment : Fragment() {
     private fun showEndGame() {
         Toast.makeText(context, "Oyun Bitti ! Skorunuz: $score", Toast.LENGTH_LONG).show()
         binding.restartButton.visibility = View.VISIBLE
+    }
+
+    private fun getAnimations() {
+        val bottomAnimation = AnimationUtils.loadAnimation(context, R.anim.bottom_animation)
+        val topAnimation = AnimationUtils.loadAnimation(context, R.anim.top_animation)
+        binding.scoreTextView.startAnimation(bottomAnimation)
+        binding.guessButton.startAnimation(bottomAnimation)
+        binding.guessEditText.startAnimation(bottomAnimation)
+        binding.wordTextView.startAnimation(bottomAnimation)
+        binding.tvGameDesc.startAnimation(bottomAnimation)
+        binding.tvGameName.startAnimation(topAnimation)
     }
 
 }
