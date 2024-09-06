@@ -46,6 +46,8 @@ class SwitchFragment : Fragment(), SwitchListener {
         val bottomNavMenu = (activity as MainActivity).bottomNavmenu
 
 
+
+
         binding.scEgo.setOnCheckedChangeListener { _, isChecked ->
             (activity as? MainActivity)?.setBottomNavVisibility(!isChecked)
             if (isChecked) {
@@ -178,7 +180,8 @@ class SwitchFragment : Fragment(), SwitchListener {
     fun getAnimation() {
         val topAnimation = AnimationUtils.loadAnimation(context, R.anim.top_animation)
         val bottomAnimation = AnimationUtils.loadAnimation(context, R.anim.bottom_animation)
-        binding.scEgo.startAnimation(bottomAnimation)
+        val stbAnimation = AnimationUtils.loadAnimation(context, R.anim.stb_anim)
+        binding.scEgo.startAnimation(stbAnimation)
         binding.scRespect.startAnimation(bottomAnimation)
         binding.scGiving.startAnimation(bottomAnimation)
         binding.scKindness.startAnimation(topAnimation)
